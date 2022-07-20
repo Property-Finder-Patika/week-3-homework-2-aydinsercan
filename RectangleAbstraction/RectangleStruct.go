@@ -2,12 +2,8 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"os"
 	errRect "rectangleStruct/errors"
 )
-
-const LOG_FILE = "/Users/SERCAN/Documents/GitHub/week-3-homework-2-aydinsercan/RectangleAbstraction/Golog.txt"
 
 type Rectangle struct {
 	length float32
@@ -15,17 +11,6 @@ type Rectangle struct {
 }
 
 func main() {
-
-	logFile, err := os.OpenFile(LOG_FILE, os.O_APPEND|os.O_RDWR|os.O_CREATE, 0644)
-	if err != nil {
-		log.Panic(err)
-	}
-	defer logFile.Close()
-	// Set log out put and enjoy :)
-	log.SetOutput(logFile)
-	// optional: log date-time, filename, and line number
-	log.SetFlags(log.Lshortfile | log.LstdFlags)
-	log.Println("Logging to the file")
 
 	var l, w float32
 	fmt.Println("Enter Length value : ")
@@ -35,7 +20,6 @@ func main() {
 
 	rect, err := createRect(l, w)
 	if err != nil {
-		log.Println("Creation failed: ", err)
 		fmt.Println("Creating a new rectangle encounters Error")
 		fmt.Println(err)
 		return
