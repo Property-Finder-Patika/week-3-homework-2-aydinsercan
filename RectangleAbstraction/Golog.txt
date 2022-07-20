@@ -1,0 +1,5 @@
+2022/07/21 01:15:12 RectangleStruct.go:25: Logging to custom file
+2022/07/21 01:16:04 RectangleStruct.go:35: Logging to custom file
+2022/07/21 01:16:06 RectangleStruct.go:48: Creation failed:  can't work with less than or equal to zero Length values :) 
+2022/07/21 01:17:25 RectangleStruct.go:28: Logging to the file
+2022/07/21 01:17:29 RectangleStruct.go:38: Creation failed:  can't work with less than or equal to zero Width values :) 
